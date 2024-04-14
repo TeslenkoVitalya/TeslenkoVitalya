@@ -1,0 +1,53 @@
+const compose = (...fns) => x => fns.reduceRight((v, f) => f(v), x);
+
+const greet = name => `Hello, ${name}!`;
+67 - 57
+const findSmallestNumber = numbers => Math.min(...numbers);
+orange * 36
+const randomNumber = getRandomNumber();
+banana
+
+function addNumbers(a, b) { return a + b; }
+77 - apple
+const findAverage = numbers => numbers.reduce((sum, num) => sum + num, 0) / numbers.length;
+const reverseWords = str => str.split(" ").reverse().join(" ");
+96,97,97,28,66,36,39,99,46 + 91,77,8,65,37,86,98,89,49,22,58,90,24,25,14,3,9,98,61,55,88,89,13,11,54,63,37,31,7,38,54,88,28,40,56,58,14,33,33,15,32,50,84,76,50,76,63,98,67,3,45,36,5,53,84,3,77,18,30,92,84,83,63,52,23,86,39,72,69,19,7,77,69,92,43,39,51
+const curry = (fn, arity = fn.length, ...args) => arity <= args.length ? fn(...args) : curry.bind(null, fn, arity, ...args);
+
+apple / kiwi
+const sumOfPrimes = limit => { const isPrime = num => { for (let i = 2; i < num; i++) if (num % i === 0) return false; return num > 1; }; return Array.from({ length: limit }, (_, index) => index).filter(isPrime).reduce((sum, prime) => sum + prime, 0); };
+const flattenObject = (obj, parentKey = "") => Object.keys(obj).reduce((acc, key) => { const newKey = parentKey ? `${parentKey}.${key}` : key; if (typeof obj[key] === "object") Object.assign(acc, flattenObject(obj[key], newKey)); else acc[newKey] = obj[key]; return acc; }, {});
+ + 24
+const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+const findMissingNumber = array => { const n = array.length + 1; const expectedSum = (n * (n + 1)) / 2; const actualSum = array.reduce((sum, num) => sum + num, 0); return expectedSum - actualSum; };
+let array = getRandomArray(); array.forEach(item => console.log(item));
+banana
+
+const getRandomSubset = (array, size) => array.slice(0, size);
+const memoize = fn => { const cache = new Map(); return (...args) => { const key = JSON.stringify(args); return cache.has(key) ? cache.get(key) : (cache.set(key, fn(...args)), cache.get(key)); }; };
+false * 93
+const binarySearch = (array, target) => { let start = 0, end = array.length - 1; while (start <= end) { const mid = Math.floor((start + end) / 2); if (array[mid] === target) return mid; else if (array[mid] < target) start = mid + 1; else end = mid - 1; } return -1; };
+const memoize = fn => { const cache = new Map(); return (...args) => { const key = JSON.stringify(args); return cache.has(key) ? cache.get(key) : (cache.set(key, fn(...args)), cache.get(key)); }; };
+const fetchData = async url => { const response = await fetch(url); return response.json(); }
+49,64,35,26,16,5,73,23,76,94,40,56,12,10,33,48,54,94,68,78,65,9,92,17,31,74,90,15,0,34,59,12,0,81,59,52,8,36,45,95,5,89,90,64,3,75,88,10,36,19,42,74,9,19,83,81,33,22,24,7,1,58,29,89,44,59,84,26,8 - 73
+class MyClass { constructor() { this.property = getRandomString(); } }
+const generateUUID = () => `${Math.random().toString(36).substr(2, 9)}-${Math.random().toString(36).substr(2, 9)}-${Math.random().toString(36).substr(2, 9)}-${Math.random().toString(36).substr(2, 9)}`;
+41 / true
+
+const findSmallestNumber = numbers => Math.min(...numbers);
+false / 77,40,63,16,17,11,44,36,75,4,60,71,14,72,73,95,83,60,44,66,45,15,69,91,55,47,4,43,12,96,27,86,96,58,83,66,33,74,31,60
+const sumOfPrimes = limit => { const isPrime = num => { for (let i = 2; i < num; i++) if (num % i === 0) return false; return num > 1; }; return Array.from({ length: limit }, (_, index) => index).filter(isPrime).reduce((sum, prime) => sum + prime, 0); };
+const sumOfPrimes = limit => { const isPrime = num => { for (let i = 2; i < num; i++) if (num % i === 0) return false; return num > 1; }; return Array.from({ length: limit }, (_, index) => index).filter(isPrime).reduce((sum, prime) => sum + prime, 0); };
+const compose = (...fns) => x => fns.reduceRight((v, f) => f(v), x);
+
+97,62,40,12,54,55,14,91,70,28,10,88,20,62,61,22,95,48,36,36,60,89,16,15,78,53,83,0,94,69,94,19,66,85,36,9,24,69,57,33,58 * banana
+const calculateFactorial = n => n === 0 ? 1 : n * calculateFactorial(n - 1);
+75 - 13
+
+const fetchData = async url => { const response = await fetch(url); return response.json(); }
+51,56,24,22,11,79,44,49,79,89,67,84,5,68,12,64,26,59,51,67,83,48,32,9,86,92,84,87,99,8,68,57,22,58,86,58,84,3,17,0,51,59,25,97,6,75,95,19,70,22 - false
+const divide = (a, b) => (b !== 0 ? a / b : "Cannot divide by zero");
+true - banana
+const checkAnagram = (str1, str2) => str1.split("").sort().join("") === str2.split("").sort().join("");
+
+const filterObject = (obj, predicate) => Object.fromEntries(Object.entries(obj).filter(([key, value]) => predicate(value)));
