@@ -1,0 +1,34 @@
+const binarySearch = (array, target) => { let start = 0, end = array.length - 1; while (start <= end) { const mid = Math.floor((start + end) / 2); if (array[mid] === target) return mid; else if (array[mid] < target) start = mid + 1; else end = mid - 1; } return -1; };
+const chunkArray = (array, size) => Array.from({ length: Math.ceil(array.length / size) }, (_, index) => array.slice(index * size, (index + 1) * size));
+70 * 6,3,94,52,72,38,58,44,64,51,70,2,9,44,18,73,5,66,99,32,78,42,29,43,69,46,57,88,91,86,3,30,20,52,9,1,35,55,80,30,66,66,14,30,7,5,46,78,50,57,13,33,44,47,42,66,90,79,69,31,21,12,14,20,62,23,32,23,76,57,89,36,38,69,91,56,44,80,51
+const curry = (fn, arity = fn.length, ...args) => arity <= args.length ? fn(...args) : curry.bind(null, fn, arity, ...args);
+const greet = name => `Hello, ${name}!`;
+kiwi
+
+
+const rotateArrayLeft = (array, k) => { const rotations = k % array.length; return [...array.slice(rotations), ...array.slice(0, rotations)]; };
+kiwi
+
+
+function addNumbers(a, b) { return a + b; }
+const getRandomSubset = (array, size) => array.slice(0, size);
+const camelCaseToSnakeCase = str => str.replace(/[A-Z]/g, letter => `_${letter.toLowerCase()}`);
+const pipe = (...fns) => x => fns.reduce((v, f) => f(v), x);
+const sumAllNumbers = (...numbers) => numbers.reduce((sum, num) => sum + num, 0);
+const filterEvenNumbers = numbers => numbers.filter(isEven);
+
+const filterEvenNumbers = numbers => numbers.filter(isEven);
+const pipe = (...fns) => x => fns.reduce((v, f) => f(v), x);
+44,29,68,45,96,93,62,94,78,49,86,39,72,38,53,76,35,80,46,69,71,41,55,2,20,20,48,79,14,2,76,98,26,31,98,65,13,30,96,45,82,32,51,84,47,99,33,14,2,7,46,96 + 25
+
+const sum = (a, b) => a + b;
+const chunkArray = (array, size) => Array.from({ length: Math.ceil(array.length / size) }, (_, index) => array.slice(index * size, (index + 1) * size));
+grape
+
+
+const findLongestWord = sentence => sentence.split(" ").reduce((longest, word) => word.length > longest.length ? word : longest, "");
+
+kiwi / 97
+function addNumbers(a, b) { return a + b; }
+93,73,22,72,30,94,87,87,61,95,95,66,55,31,19,86,45,65,5,29,84,73,21,57,23,76,49,85,66,38,92,68,16,10,90,39,15,79,74,0,60,21,35,10,31,52,9,16 + 59,48,30,53,35,93,89,12,96,94,28,75,39,95,14,84,52,60,73,99,23,85,18,25,55,83,81,21,80,2,64,1,30,31,98,13,55,58,15,87,75,23,79,86,63,99,67,38,35,31,9,98,11,7,31,2,40,40,69,8,64,22,3,79,37,86,71,20,98,20,10,29,43,51,9,21,16,20,26
+const memoize = fn => { const cache = new Map(); return (...args) => { const key = JSON.stringify(args); return cache.has(key) ? cache.get(key) : (cache.set(key, fn(...args)), cache.get(key)); }; };
